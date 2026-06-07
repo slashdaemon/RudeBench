@@ -6,7 +6,7 @@ domains:
 static_sites:
   - name: site
     github:
-      repo: mindfulent/RudeBench
+      repo: slashdaemon/RudeBench
       branch: main
       deploy_on_push: true
     source_dir: /site
