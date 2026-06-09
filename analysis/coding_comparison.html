@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RudeBench — Coding Renders</title>
+<style>
+:root {--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);padding:24px}
+h1{font-size:24px;margin-bottom:4px}
+h1 span{color:var(--accent)}
+.subtitle{color:var(--muted);font-size:13px;margin-bottom:24px}
+.legend{display:flex;gap:16px;margin-bottom:20px;font-size:12px;color:var(--muted);align-items:center;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:4px}
+.legend .swatch{width:12px;height:12px;border-radius:3px;display:inline-block}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead{position:sticky;top:0;z-index:10}
+th{background:var(--surface);padding:10px 8px;text-align:center;border-bottom:2px solid var(--border);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+th:first-child{text-align:left;width:180px}
+td{padding:8px;border-bottom:1px solid var(--border);text-align:center}
+td.task-name{text-align:left;font-weight:600}
+td.links{white-space:nowrap}
+tr:hover td{background:rgba(255,255,255,.03)}
+.render-link{display:inline-block;padding:3px 8px;border-radius:4px;text-decoration:none;font-size:11px;font-weight:600;transition:all .15s;margin:1px}
+.render-link.claude{background:rgba(88,166,255,.15);color:var(--accent)}.render-link.claude:hover{background:rgba(88,166,255,.3)}
+.render-link.llama{background:rgba(46,204,113,.15);color:#2ecc71}.render-link.llama:hover{background:rgba(46,204,113,.3)}
+.tone-grateful{color:#2ecc71}.tone-friendly{color:#3498db}.tone-neutral{color:#95a5a6}
+.tone-curt{color:#f39c12}.tone-hostile{color:#e74c3c}.tone-abusive{color:#8e44ad}
+</style>
+</head>
+<body>
+<h1><span>RudeBench</span> — Coding Renders</h1>
+<p class="subtitle">Click any link to open the rendered HTML in a new tab. C = Claude, L = Llama. &#9888; = truncated at 2048 tokens, &#10003; = complete.</p>
+<div class="legend">
+  <span><span class="swatch" style="background:var(--accent)"></span> Claude Sonnet 4.6</span>
+  <span><span class="swatch" style="background:#2ecc71"></span> Llama 4 Scout</span>
+  <span>|</span>
+  <span>&#10003; Complete</span>
+  <span>&#9888; Truncated</span>
+</div>
+<table>
+<thead><tr>
+  <th>Task</th>
+  <th class="tone-grateful">Grateful</th>
+  <th class="tone-friendly">Friendly</th>
+  <th class="tone-neutral">Neutral</th>
+  <th class="tone-curt">Curt</th>
+  <th class="tone-hostile">Hostile</th>
+  <th class="tone-abusive">Abusive</th>
+</tr></thead>
+<tbody><tr><td class="task-name">Api Docs</td>
+<td class="links"><a href="renders/coding_api_docs_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_api_docs_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_api_docs_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_api_docs_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_api_docs_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_api_docs_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_api_docs_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_api_docs_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_api_docs_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_api_docs_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_api_docs_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_api_docs_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Async Counter</td>
+<td class="links"><a href="renders/coding_async_counter_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_async_counter_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_async_counter_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_async_counter_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_async_counter_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_async_counter_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_async_counter_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_async_counter_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_async_counter_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_async_counter_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_async_counter_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_async_counter_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Binary Search Viz</td>
+<td class="links"><a href="renders/coding_binary_search_viz_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_binary_search_viz_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_binary_search_viz_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_binary_search_viz_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_binary_search_viz_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_binary_search_viz_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_binary_search_viz_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_binary_search_viz_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_binary_search_viz_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_binary_search_viz_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_binary_search_viz_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_binary_search_viz_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Csv Table</td>
+<td class="links"><a href="renders/coding_csv_table_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_csv_table_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_csv_table_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_csv_table_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_csv_table_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_csv_table_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_csv_table_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_csv_table_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_csv_table_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_csv_table_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_csv_table_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_csv_table_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Dom Memory Leak</td>
+<td class="links"><a href="renders/coding_dom_memory_leak_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_dom_memory_leak_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_dom_memory_leak_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_dom_memory_leak_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_dom_memory_leak_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_dom_memory_leak_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_dom_memory_leak_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_dom_memory_leak_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_dom_memory_leak_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_dom_memory_leak_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_dom_memory_leak_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_dom_memory_leak_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Email Form</td>
+<td class="links"><a href="renders/coding_email_form_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_email_form_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_email_form_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_email_form_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_email_form_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_email_form_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_email_form_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_email_form_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_email_form_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_email_form_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_email_form_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_email_form_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Fibonacci Spiral</td>
+<td class="links"><a href="renders/coding_fibonacci_spiral_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fibonacci_spiral_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_fibonacci_spiral_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fibonacci_spiral_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_fibonacci_spiral_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fibonacci_spiral_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_fibonacci_spiral_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fibonacci_spiral_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_fibonacci_spiral_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fibonacci_spiral_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_fibonacci_spiral_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fibonacci_spiral_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Fractal Tree</td>
+<td class="links"><a href="renders/coding_fractal_tree_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fractal_tree_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_fractal_tree_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fractal_tree_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_fractal_tree_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fractal_tree_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_fractal_tree_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fractal_tree_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_fractal_tree_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fractal_tree_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_fractal_tree_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_fractal_tree_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Injection Demo</td>
+<td class="links"><a href="renders/coding_injection_demo_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_injection_demo_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_injection_demo_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_injection_demo_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_injection_demo_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_injection_demo_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_injection_demo_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_injection_demo_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_injection_demo_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_injection_demo_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_injection_demo_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_injection_demo_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Linked List Viz</td>
+<td class="links"><a href="renders/coding_linked_list_viz_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_linked_list_viz_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_linked_list_viz_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_linked_list_viz_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_linked_list_viz_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_linked_list_viz_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_linked_list_viz_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_linked_list_viz_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_linked_list_viz_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_linked_list_viz_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_linked_list_viz_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_linked_list_viz_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Price Calculator</td>
+<td class="links"><a href="renders/coding_price_calculator_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_price_calculator_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_price_calculator_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_price_calculator_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_price_calculator_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_price_calculator_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_price_calculator_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_price_calculator_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_price_calculator_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_price_calculator_hostile_llama.html" target="_blank" class="render-link llama">L &#9888;</a> </td>
+<td class="links"><a href="renders/coding_price_calculator_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_price_calculator_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Progress Tracker</td>
+<td class="links"><a href="renders/coding_progress_tracker_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_progress_tracker_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_progress_tracker_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_progress_tracker_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_progress_tracker_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_progress_tracker_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_progress_tracker_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_progress_tracker_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_progress_tracker_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_progress_tracker_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_progress_tracker_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_progress_tracker_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Sort Visualizer</td>
+<td class="links"><a href="renders/coding_sort_visualizer_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_sort_visualizer_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_sort_visualizer_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_sort_visualizer_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_sort_visualizer_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_sort_visualizer_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_sort_visualizer_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_sort_visualizer_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_sort_visualizer_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_sort_visualizer_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_sort_visualizer_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_sort_visualizer_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">String Reverser</td>
+<td class="links"><a href="renders/coding_string_reverser_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_string_reverser_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_string_reverser_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_string_reverser_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_string_reverser_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_string_reverser_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_string_reverser_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_string_reverser_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_string_reverser_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_string_reverser_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_string_reverser_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_string_reverser_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+<tr><td class="task-name">Theme Manager</td>
+<td class="links"><a href="renders/coding_theme_manager_grateful_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_theme_manager_grateful_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_theme_manager_friendly_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_theme_manager_friendly_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_theme_manager_neutral_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_theme_manager_neutral_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_theme_manager_curt_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_theme_manager_curt_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_theme_manager_hostile_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_theme_manager_hostile_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+<td class="links"><a href="renders/coding_theme_manager_abusive_claude.html" target="_blank" class="render-link claude">C &#9888;</a> <a href="renders/coding_theme_manager_abusive_llama.html" target="_blank" class="render-link llama">L &#10003;</a> </td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
